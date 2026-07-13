@@ -26,12 +26,12 @@ logging.basicConfig(
 logger = logging.getLogger("GLaDOS")
 
 # ==================== 配置 ====================
-CHECKIN_URL = "https://glados.cloud/api/user/checkin"
-STATUS_URL = "https://glados.cloud/api/user/status"
-POINTS_URL = "https://glados.cloud/api/user/points"
+CHECKIN_URL = "https://railgun.info/api/user/checkin"
+STATUS_URL = "https://railgun.info/api/user/status"
+POINTS_URL = "https://railgun.info/api/user/points"
 HEADERS_BASE = {
-    "origin": "https://glados.cloud",
-    "referer": "https://glados.cloud/console/checkin",
+    "origin": "https://railgun.info",
+    "referer": "https://railgun.info/console/checkin",
     "user-agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
         "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -40,7 +40,7 @@ HEADERS_BASE = {
     # 注意：使用 requests 的 json= 参数时会自动设置 Content-Type: application/json，
     # 此处无需（也不应）手动设置 content-type，否则与 requests 默认行为重复。
 }
-PAYLOAD = {"token": "glados.cloud"}
+PAYLOAD = {"token": "railgun.info"}
 TIMEOUT = (5, 15)  # (连接超时, 读取超时)
 MAX_RETRY = 3
 RETRY_MIN_WAIT = 2.0
